@@ -7330,6 +7330,8 @@ name = "static-files"
 version = "1.0.0"
 dependencies = [
  "actix-files",
+ "actix-identity",
+ "actix-session",
  "actix-web",
  "env_logger",
  "log",

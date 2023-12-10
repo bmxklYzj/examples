@@ -7,8 +7,22 @@
     <script src="/js/example.js"></script>
 </head>
 <body>
+    <script>
+        const logout = () => {
+        fetch('/logout', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+        })
+          .then(res => res.json())
+          .then(res => {
+            location.href = '/'
+          })
+      }
+    </script>
     <h1>home</h1>
     <img src="/images/logo.png" alt="Actix logo" />
-    <button>logout</button>
+    <button onclick="logout()">logout</button>
 </body>
 </html>
